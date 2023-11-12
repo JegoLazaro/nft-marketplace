@@ -49,7 +49,7 @@ export const RecButton = ({ minWidth, fontSize, handlePress, ...props }) => {
         color: COLORS.white,
         textAlign: "center",
       }}>
-        Place a Bid
+        View NFT
       </Text>
     </TouchableOpacity>
   );

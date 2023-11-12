@@ -10,13 +10,16 @@ const Home = () => {
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.primary}}>
         <FocusedStatusBar />
         <View style={{flex : 1}}>
-            <View style={{zIndex : 0}}>
+            <View style={{
+                    zIndex : 0,
+                    marginTop: 140
+                }}>
                 <FlatList 
                     data={NFTData}
                     renderItem={({item}) => <NFTCard data={item}/>}
                     keyExtractor={(item) => item.id}
                     showsVerticalScrollIndicator={false}
-                    ListHeaderComponent={<HomeHeader />}
+                    // ListHeaderComponent={}
                 />   
             </View>
             <View style={{
@@ -27,7 +30,9 @@ const Home = () => {
                 left: 0,
                 zIndex : -1
                 }}>
-                    <View style={{height: 300, backgroundColor: COLORS.primary}}/>
+                    <View style={{height: 300, backgroundColor: COLORS.primary}}>
+                    <HomeHeader />
+                    </View>
                     <View style={{flex: 1, backgroundColor: COLORS.white}}/>
             </View>
         </View>

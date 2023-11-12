@@ -1,10 +1,10 @@
 import { View, Text, Image,TextInput } from "react-native";
 import React from "react";
-import { HandRaisedIcon } from "react-native-heroicons/solid";
-import { COLORS } from "../constants";
+import { HandRaisedIcon, MagnifyingGlassIcon } from "react-native-heroicons/solid";
+import { COLORS, SIZES, assets } from "../constants";
 // import { TextInput } from "react-native-gesture-handler";
 
-const HomeHeader = () => {
+const HomeHeader = ({onSearch}) => {
   return (
     <View style={{ flex: 1 }}>
       <View
@@ -55,8 +55,36 @@ const HomeHeader = () => {
           Welcome to NFT Market
         </Text>
       </View>
-      <View>
-        <TextInput />
+      <View style={{marginTop: SIZES.font}}>
+        <View style={{
+          marginHorizontal: 10, 
+          width: '95%',
+          borderRadius: SIZES.font,
+          backgroundColor: COLORS.white,
+          flexDirection: 'row',
+          alignItems: 'center',
+          paddingHorizontal: SIZES.font,
+          paddingVertical: SIZES.small - 2
+        }}>
+          {/* <Image 
+            source={assets.search}
+            resizeMode="contain"
+            style={{
+              color: COLORS.primary,
+              width: SIZES.font,
+              height: SIZES.font,
+              marginRight: SIZES.base
+            }}
+          /> */}
+          <MagnifyingGlassIcon size={20} color={COLORS.primary} style={{
+            marginRight: 10
+          }}/>
+        <TextInput 
+          placeholder="Search NFTs..."
+          style={{flex : 1}}
+          onChangeText={onSearch}
+        />
+        </View>
       </View>
     </View>
   );

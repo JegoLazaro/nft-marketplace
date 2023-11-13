@@ -14,8 +14,6 @@ const NFTCard = ({ data }) => {
         backgroundColor: COLORS.white,
         borderRadius: SIZES.font,
         marginBottom: SIZES.extraLarge,
-        // borderColor: COLORS.primary,
-        // borderWidth: 5,
         margin: SIZES.base,
         ...SHADOWS.dark,
       }}

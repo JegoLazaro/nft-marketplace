@@ -104,7 +104,7 @@ const Profile = () => {
       </View>
       <Tab.Navigator screenOptions={{
     tabBarLabelStyle: { fontSize: SIZES.large },
-    // tabBarItemStyle: { width: 100 },
+    //  tabBarItemStyle: { borderBlockColor: '#fff' },
     tabBarStyle: { 
         marginTop: 20,
         backgroundColor: COLORS.gray,

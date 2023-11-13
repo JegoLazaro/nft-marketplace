@@ -4,6 +4,7 @@ import React from "react";
 import { useFonts } from "expo-font";
 import Home from "./screens/Home";
 import Details from "./screens/Details";
+import Profile from "./screens/Profile";
 
 const Stack = createStackNavigator();
 const theme = {
@@ -35,6 +36,7 @@ const App = () => {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );

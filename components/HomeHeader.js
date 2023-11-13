@@ -2,9 +2,12 @@ import { View, Text, Image,TextInput } from "react-native";
 import React from "react";
 import { HandRaisedIcon, MagnifyingGlassIcon } from "react-native-heroicons/solid";
 import { COLORS, SIZES, assets } from "../constants";
-// import { TextInput } from "react-native-gesture-handler";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 const HomeHeader = ({onSearch}) => {
+  const navigation = useNavigation();
+
   return (
     <View style={{ flex: 1 }}>
       <View
@@ -17,21 +20,26 @@ const HomeHeader = ({onSearch}) => {
       >
         {/* <Text>HomeHeader</Text> */}
         <Image
-          source={require("../assets/images/logo.png")}
+          source={require("../assets/nft-logo.png")}
           style={{
-            marginTop: 10,
-            width: 110,
-            height: 30,
+            
+            width: 70,
+            height: 80,
+            backgroundColor: COLORS.primary,
+
           }}
         />
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
         <Image
           source={require("../assets/images/prof_pic.jpg")}
           style={{
-            width: 50,
-            height: 50,
+            marginTop: 10,
+            width: 70,
+            height: 70,
             borderRadius: 40,
           }}
         />
+        </TouchableOpacity>
       </View>
       <View
         style={{

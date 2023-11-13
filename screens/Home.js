@@ -19,15 +19,13 @@ const Home = () => {
         }
     }
 
-    
-
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.primary}}>
         <FocusedStatusBar />
         <View style={{flex : 1}}>
             <View style={{
                     zIndex : 0,
-                    marginTop: 200
+                    marginTop: 215
                 }}>
                 <FlatList 
                     data={nft}
@@ -45,10 +43,10 @@ const Home = () => {
                 left: 0,
                 zIndex : -1
                 }}>
-                    <View style={{height: 300, backgroundColor: COLORS.primary}}>
+                    <View style={{height: 300, backgroundColor: COLORS.primary, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}>
                     <HomeHeader onSearch={handleSearch}/>
                     </View>
-                    <View style={{flex: 1, backgroundColor: COLORS.white}}/>
+                    <View style={{flex: 1, backgroundColor: COLORS.gray}}/>
             </View>
         </View>
     </SafeAreaView>

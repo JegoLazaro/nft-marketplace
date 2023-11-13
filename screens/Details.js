@@ -14,10 +14,9 @@ const Details = () => {
     <View
       style={{
         flex: 1,
-        // justifyContent: 'center',
-        //alignItems: 'center',
       }}
     >
+      
       <TouchableOpacity
         style={{
           color: COLORS.primary,
@@ -30,6 +29,20 @@ const Details = () => {
         <ChevronLeftIcon size="28" strokeWidth={2.5} color="white" />
       </TouchableOpacity>
       {/* <Text>Details</Text> */}
+      <View style={{
+        alignItems: "center"
+      }}>
+        <Text style={{
+          fontSize: SIZES.extraLarge,
+          fontWeight: 600,
+          color: COLORS.white,
+          textAlign: "center",
+          paddingTop: 5,
+          paddingBottom: 10,
+        }}>
+          {data.name}
+        </Text>
+      </View>
       <View
         style={{
           width: "95%",

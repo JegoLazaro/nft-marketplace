@@ -17,6 +17,7 @@ import Details from "./Details";
 import NftTab from "./NftTab";
 import BidsTab from "./BidsTab";
 import FavoritesTab from "./FavoritesTab";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -37,6 +38,7 @@ const Profile = () => {
         }}
       >
         {/* <Text>HomeHeader</Text> */}
+        <TouchableOpacity onPress={() => navigation.goBack()}>
         <Image
           source={require("../assets/nft-logo.png")}
           style={{
@@ -45,6 +47,7 @@ const Profile = () => {
             backgroundColor: COLORS.primary,
           }}
         />
+        </TouchableOpacity>
         <EllipsisHorizontalIcon size={40} color={COLORS.gray} />
       </View>
       <View
@@ -62,13 +65,7 @@ const Profile = () => {
             borderColor: "#30b1cf",
           }}
         />
-        <View
-          style={
-            {
-              // justifyContent: "center"
-            }
-          }
-        >
+        <View>
           <Text
             style={{
               textAlign: "center",
@@ -103,18 +100,17 @@ const Profile = () => {
         <View style={{ flex: 1, backgroundColor: COLORS.gray }} />
       </View>
       <Tab.Navigator screenOptions={{
-    tabBarLabelStyle: { fontSize: SIZES.large },
+    tabBarLabelStyle: { fontSize: SIZES.large, color: COLORS.primary },
     //  tabBarItemStyle: { borderBlockColor: '#fff' },
     tabBarStyle: { 
         marginTop: 20,
         backgroundColor: COLORS.gray,
-        borderTopColor: COLORS.primary,
         borderTopWidth: 1,
         borderBottomColor: COLORS.primary,
         borderBottomWidth: 1,
     },
   }}>
-        <Tab.Screen name="NFT" component={NftTab} />
+        <Tab.Screen name="NFTs" component={NftTab} />
         <Tab.Screen name="Bids" component={BidsTab} />
         <Tab.Screen name="Favorites" component={FavoritesTab} />
       </Tab.Navigator>

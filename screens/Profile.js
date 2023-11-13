@@ -59,7 +59,7 @@ const Profile = () => {
             height: 170,
             borderRadius: 100,
             borderWidth: 5,
-            borderColor: COLORS.gray,
+            borderColor: "#30b1cf",
           }}
         />
         <View

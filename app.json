@@ -1,13 +1,14 @@
 {
   "expo": {
-    "name": "nft-marketplace",
-    "slug": "nft-marketplace",
+    "name": "NFT Mini Marketplace",
+    "slug": "nft-mini-marketplace",
+    "description": "NFT UI Marketplace",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/nft-logo-screen.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/nft-logo-screen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,6 +26,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "80d7f22e-21b3-4cfc-9b80-d64c29062baf"
+      }
+    },
+    "owner": "jego01"
   }
 }

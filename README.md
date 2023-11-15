@@ -10,6 +10,8 @@ This repository contains the source code for the NFT Mini Marketplace app, a mob
 - React Native
 - JavaScript
 - Expo
+- Tailwindcss
+- Nodejs
 
 ## Getting Started
 
@@ -21,6 +23,7 @@ Follow these steps to set up and run the NFT Mini Marketplace app on your local 
 - Expo CLI installed globally
   ```
   npm install -g expo-cli
+  ```
   
 Steps
 Clone the Repository:
